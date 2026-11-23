@@ -1,6 +1,8 @@
 import { useState } from "react";
 import {
   ArrowUpRight,
+  Award,
+  Briefcase,
   ChevronDown,
   Code2,
   Cpu,
@@ -11,16 +13,22 @@ import {
   Layers3,
   Mail,
   Menu,
-  Network,
   Server,
   ShieldCheck,
   Sparkles,
   Terminal,
-  UserRound,
   X,
 } from "lucide-react";
 
-import { profile, skills, learning, projects, education } from "./data";
+import {
+  profile,
+  skills,
+  learning,
+  projects,
+  education,
+  experience,
+  certifications,
+} from "./data";
 import { SiGithub } from "react-icons/si";
 
 function SectionHeading({ eyebrow, title, description }) {
@@ -40,7 +48,9 @@ function Navbar() {
     ["About", "#about"],
     ["Skills", "#skills"],
     ["Projects", "#projects"],
+    ["Experience", "#experience"],
     ["Education", "#education"],
+    ["Certifications", "#certifications"],
     ["Contact", "#contact"],
   ];
 
@@ -92,7 +102,7 @@ function Hero() {
           <p className="hero-kicker">Hello, I&apos;m</p>
           <h1>
             Mohamed
-            <span>Alagamy.</span>
+            <span>Elagmy.</span>
           </h1>
 
           <h2 className="hero-role">Frontend / Full-Stack Web Developer</h2>
@@ -114,6 +124,13 @@ function Hero() {
               rel="noreferrer"
             >
               <SiGithub size={18} /> GitHub
+            </a>
+            <a
+              className="button button-secondary"
+              href={`${import.meta.env.BASE_URL}Mohamed-Elsayed-Elagmy-CV.pdf`}
+              download="Mohamed-Elsayed-Elagmy-CV.pdf"
+            >
+              <Download size={18} /> Download CV
             </a>
           </div>
 
@@ -214,7 +231,8 @@ const skillIcons = {
   "Frontend Development": Code2,
   "Backend Development": Server,
   "Computer Science": Layers3,
-  "AI & Analytical Skills": Sparkles,
+  "AI & Automation": Sparkles,
+  "Cybersecurity & Networking": ShieldCheck,
   "Embedded Systems & IoT": Cpu,
   Tools: Terminal,
 };
@@ -362,12 +380,45 @@ function Projects() {
   );
 }
 
-function Education() {
+function Experience() {
   return (
-    <section id="education" className="section section-black">
+    <section id="experience" className="section section-black">
       <div className="container">
         <SectionHeading
-          eyebrow="04 / Education"
+          eyebrow="04 / Experience"
+          title="Building a real product."
+          description="Hands-on product work alongside academic study."
+        />
+
+        {experience.map((job) => (
+          <div className="education-card" key={job.id}>
+            <div className="education-icon">
+              <Briefcase size={28} />
+            </div>
+            <div className="education-content">
+              <div className="education-meta">
+                <span>{job.period}</span>
+                <span>{job.location}</span>
+              </div>
+              <h3>{job.role}</h3>
+              <h4>
+                {job.company} · {job.type}
+              </h4>
+              <p>{job.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Education() {
+  return (
+    <section id="education" className="section section-dark">
+      <div className="container">
+        <SectionHeading
+          eyebrow="05 / Education"
           title="Computer Science foundation."
           description="Academic study supports the web-development direction with programming, data, systems, and analytical fundamentals."
         />
@@ -397,13 +448,50 @@ function Education() {
   );
 }
 
+function Certifications() {
+  return (
+    <section id="certifications" className="section section-black">
+      <div className="container">
+        <SectionHeading
+          eyebrow="06 / Certifications"
+          title="Certified learning, verified."
+          description="Industry certificates earned through DataCamp and Cisco Networking Academy."
+        />
+
+        <div className="skills-grid">
+          {certifications.map((cert) => (
+            <article className="skill-card" key={cert.id}>
+              <div className="skill-card-header">
+                <div className="skill-icon">
+                  <Award size={21} />
+                </div>
+                <h3>{cert.group}</h3>
+              </div>
+
+              <ul className="cert-list">
+                {cert.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+
+              <p className="cert-meta">
+                {cert.issuer} · {cert.year}
+              </p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Contact() {
   return (
     <section id="contact" className="section contact-section">
       <div className="container">
         <div className="contact-card">
           <div className="contact-copy">
-            <p className="eyebrow">05 / Contact</p>
+            <p className="eyebrow">07 / Contact</p>
             <h2>Let&apos;s build something useful.</h2>
             <p>
               I&apos;m open to connecting around web development, learning,
@@ -452,7 +540,7 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-inner">
-        <span>© {new Date().getFullYear()} Mohamed Alagamy</span>
+        <span>© {new Date().getFullYear()} Mohamed Elagmy</span>
         <span>Frontend / Full-Stack Web Developer</span>
         <a href="#home" aria-label="Back to top">
           Back to top <ArrowUpRight size={15} />
@@ -471,7 +559,9 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
+        <Experience />
         <Education />
+        <Certifications />
         <Contact />
       </main>
       <Footer />
