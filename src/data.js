@@ -1,4 +1,9 @@
 import profileImage from "./assets/images/profile.jpg";
+import worldNewsLiveImage from "./assets/images/projects/world-news-live.png";
+import miaImage from "./assets/images/projects/mia-ittalonni.png";
+import nexaflowImage from "./assets/images/projects/nexaflow.png";
+import focuslyImage from "./assets/images/projects/focusly.png";
+import weatherAppImage from "./assets/images/projects/weather-app.png";
 
 export const profile = {
   name: "Mohamed Alagamy",
@@ -92,17 +97,69 @@ export const learning = ["AI Agents", "n8n", "Cybersecurity"];
 
 export const projects = [
   {
-    id: "blood-bank",
-    title: "Blood Bank Management System",
-    category: "Full-Stack Web Application",
-    status: "Project details pending",
-    year: "Academic",
+    id: "world-news-live",
+    title: "World News Live",
+    category: "React Web Application",
+    status: "Live",
+    year: "2026",
     description:
-      "A database-backed web system planned for portfolio presentation. The detailed files, screenshots, repository, and live demo will be added once they are available.",
-    technologies: ["Node.js", "Express.js", "SQLite", "JavaScript"],
-    image: null,
-    github: "",
-    live: "",
+      "A modern, responsive global news app built with React and the Currents API — live news feed, category browsing, keyword search, article details, bookmarks, and light/dark themes.",
+    technologies: ["React", "Vite", "JavaScript", "Currents API"],
+    image: worldNewsLiveImage,
+    github: "https://github.com/Mohamedalagamy200/ITI-Project-v0.1",
+    live: "https://mohamedalagamy200.github.io/ITI-Project-v0.1/",
+  },
+  {
+    id: "mia-ittalonni",
+    title: "MIA ITTALONNI",
+    category: "E-commerce Storefront",
+    status: "Live",
+    year: "2026",
+    description:
+      "A storefront website for a fashion brand — a responsive, visual multi-section site with product showcases and a clean, modern design.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    image: miaImage,
+    github: "https://github.com/Mohamedalagamy200/NTI-project",
+    live: "https://mohamedalagamy200.github.io/NTI-project/#Home",
+  },
+  {
+    id: "nexaflow",
+    title: "NexaFlow",
+    category: "SaaS Landing Page",
+    status: "Live",
+    year: "2026",
+    description:
+      "A modern landing page for a project management and team collaboration platform, with a full dashboard interface built in pure HTML and CSS.",
+    technologies: ["HTML5", "CSS3", "JavaScript"],
+    image: nexaflowImage,
+    github: "https://github.com/Mohamedalagamy200/Landing-Page-NexaFlow",
+    live: "https://mohamedalagamy200.github.io/Landing-Page-NexaFlow/",
+  },
+  {
+    id: "focusly",
+    title: "Focusly",
+    category: "Productivity Web App",
+    status: "Live",
+    year: "2026",
+    description:
+      "A responsive productivity dashboard for organizing tasks — create, edit, filter and complete tasks with priorities, categories and due dates, saved in the browser.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
+    image: focuslyImage,
+    github: "https://github.com/Mohamedalagamy200/Project-To-Do-List",
+    live: "https://mohamedalagamy200.github.io/Project-To-Do-List/",
+  },
+  {
+    id: "weather-app",
+    title: "Weather App",
+    category: "Weather Web App",
+    status: "Live",
+    year: "2026",
+    description:
+      "A weather dashboard that searches any city or uses your location — current conditions and a five-day forecast, in English or Arabic, Celsius or Fahrenheit.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Open-Meteo API"],
+    image: weatherAppImage,
+    github: "https://github.com/Mohamedalagamy200/Project-weather-app",
+    live: "https://mohamedalagamy200.github.io/Project-weather-app/",
   },
 ];
 
