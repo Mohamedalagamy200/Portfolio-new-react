@@ -6,8 +6,8 @@ import focuslyImage from "./assets/images/projects/focusly.png";
 import weatherAppImage from "./assets/images/projects/weather-app.png";
 
 export const profile = {
-  name: "Mohamed Alagamy",
-  fullName: "Mohamed Elsayed Alagmy",
+  name: "Mohamed Elagmy",
+  fullName: "Mohamed Elsayed Elagmy",
   title: "Frontend / Full-Stack Web Developer",
   location: "Cairo, Egypt",
   email: "mohamedalagamy606@gmail.com",
@@ -49,6 +49,7 @@ export const skills = [
     title: "Computer Science",
     items: [
       "C++",
+      "C#",
       "OOP",
       "Data Structures",
       "Algorithms",
@@ -61,18 +62,20 @@ export const skills = [
     ],
   },
   {
-    title: "AI & Analytical Skills",
+    title: "AI & Automation",
     items: [
-      "AI Chatbot Evaluation",
-      "Response Quality Assessment",
-      "Content Evaluation",
+      "Python",
+      "n8n",
       "Research & Fact Verification",
       "Critical Thinking",
       "Technical Documentation",
-      "Structured Feedback",
       "Problem Solving",
       "Attention to Detail",
     ],
+  },
+  {
+    title: "Cybersecurity & Networking",
+    items: ["Network Security", "Cisco Networking", "IoT Fundamentals"],
   },
   {
     title: "Embedded Systems & IoT",
@@ -163,10 +166,53 @@ export const projects = [
   },
 ];
 
+export const experience = [
+  {
+    id: "saas-founder",
+    role: "Founder & Product Owner",
+    company: "Tutoring-Centre Management SaaS",
+    type: "Self-employed",
+    period: "Nov 2026 — Present",
+    location: "Cairo, Egypt",
+    description:
+      "Designing and building a management system for tutoring centres covering attendance, monthly fees, schedules and dashboards.",
+  },
+];
+
+export const certifications = [
+  {
+    id: "datacamp-ai-leadership",
+    group: "DataCamp — AI Leadership Track",
+    issuer: "DataCamp",
+    year: "Nov 2026",
+    items: [
+      "Understanding AI",
+      "Introduction to AI Agents",
+      "Understanding Prompt Engineering",
+      "Monetizing AI",
+      "Responsible AI Practices",
+      "Explainable AI (XAI) Concepts",
+      "AI Security and Risk Management",
+    ],
+  },
+  {
+    id: "cisco-networking",
+    group: "Cisco Networking Academy",
+    issuer: "Cisco",
+    year: "Aug 2026",
+    items: [
+      "Network Technician Career Path",
+      "Network Support and Security",
+      "Introduction to IoT and Digital Transformation",
+      "Learner Achievement Award (Learn-A-Thon)",
+    ],
+  },
+];
+
 export const education = {
   degree: "B.Sc. in Computer Science",
   institution: "Future Academy",
-  status: "Second Year Student",
+  status: "Third Year Student — Expected 2028",
   coursework: [
     "Object-Oriented Programming",
     "Data Structures",
