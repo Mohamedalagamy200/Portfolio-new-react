@@ -4,6 +4,7 @@ import miaImage from "./assets/images/projects/mia-ittalonni.png";
 import nexaflowImage from "./assets/images/projects/nexaflow.png";
 import focuslyImage from "./assets/images/projects/focusly.png";
 import weatherAppImage from "./assets/images/projects/weather-app.png";
+import paradiseNurseryImage from "./assets/images/projects/paradise-nursery.png";
 
 export const profile = {
   name: "Mohamed Elagmy",
@@ -163,6 +164,19 @@ export const projects = [
     image: weatherAppImage,
     github: "https://github.com/Mohamedalagamy200/Project-weather-app",
     live: "https://mohamedalagamy200.github.io/Project-weather-app/",
+  },
+  {
+    id: "paradise-nursery",
+    title: "Paradise Nursery",
+    category: "React Shopping App",
+    status: "Live",
+    year: "2026",
+    description:
+      "A React and Redux Toolkit shopping app for a plant nursery — 18 plants in 3 categories, with a working cart, quantities, and totals.",
+    technologies: ["React", "Redux Toolkit", "Vite", "GitHub Pages"],
+    image: paradiseNurseryImage,
+    github: "https://github.com/Mohamedalagamy200/paradise-nursery-shopping-app",
+    live: "https://mohamedalagamy200.github.io/paradise-nursery-shopping-app/",
   },
 ];
 
